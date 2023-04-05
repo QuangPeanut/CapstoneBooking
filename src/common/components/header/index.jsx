@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchActionLocation, fetchActionLocationRoom, fetchSignInAction, fetchSignUpAction, SET_SIGNIN } from '../../utils/action';
 import { NavLink, useHistory } from 'react-router-dom';
 import { showModalSignIn } from '../../hooks/hooks';
+import Home from '../../../featurns/booking/pages/home';
 
 const { Search } = Input;
 
@@ -326,6 +327,7 @@ function Header(props) {
                 </>
             )
         }
+
         return (
             <>
                 <div >
@@ -517,7 +519,7 @@ function Header(props) {
     return (
         <header>
             <div className="container">
-                <div className={Styles.header}>
+                <div className={Styles.header} onClick={goToHome}>
                     <div className={Styles.logo}>
                         <img src="https://img.icons8.com/clouds/100/FA5252/home-page.png" alt='' />
                         <span style={{ color: "#FF385C", fontWeight: "700" }}>Booking Room </span>
